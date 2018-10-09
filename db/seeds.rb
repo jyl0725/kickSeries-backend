@@ -1,7 +1,29 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+require 'faker'
+
+User.create(name: Faker::Name.unique.name, username: Faker::Name.unique.name, password:'123', role: 'artist')
+User.create(name: Faker::Name.unique.name, username: Faker::Name.unique.name, password:'123', role: 'artist')
+User.create(name: Faker::Name.unique.name, username: Faker::Name.unique.name, password:'123', role: 'story teller')
+User.create(name: Faker::Name.unique.name, username: Faker::Name.unique.name, password:'123', role: 'story teller')
+User.create(name: Faker::Name.unique.name, username: Faker::Name.unique.name, password:'123', role: 'designer')
+User.create(name: Faker::Name.unique.name, username: Faker::Name.unique.name, password:'123', role: 'designer')
+
+Project.create(title: Faker::Book.title, story: Faker::Movie.quote, image_url: "https://hips.hearstapps.com/esq.h-cdn.co/assets/17/24/08_airjordan1allstar.jpg")
+Project.create(title: Faker::Book.title, story: Faker::Movie.quote, image_url: "https://hips.hearstapps.com/esq.h-cdn.co/assets/17/24/08_airjordan1allstar.jpg")
+Project.create(title: Faker::Book.title, story: Faker::Movie.quote, image_url: "https://hips.hearstapps.com/esq.h-cdn.co/assets/17/24/08_airjordan1allstar.jpg")
+Project.create(title: Faker::Book.title, story: Faker::Movie.quote, image_url: "https://hips.hearstapps.com/esq.h-cdn.co/assets/17/24/08_airjordan1allstar.jpg")
+Project.create(title: Faker::Book.title, story: Faker::Movie.quote, image_url: "https://hips.hearstapps.com/esq.h-cdn.co/assets/17/24/08_airjordan1allstar.jpg")
+Project.create(title: Faker::Book.title, story: Faker::Movie.quote, image_url: "https://hips.hearstapps.com/esq.h-cdn.co/assets/17/24/08_airjordan1allstar.jpg")
+Project.create(title: Faker::Book.title, story: Faker::Movie.quote, image_url: "https://hips.hearstapps.com/esq.h-cdn.co/assets/17/24/08_airjordan1allstar.jpg")
+Project.create(title: Faker::Book.title, story: Faker::Movie.quote, image_url: "https://hips.hearstapps.com/esq.h-cdn.co/assets/17/24/08_airjordan1allstar.jpg")
+Project.create(title: Faker::Book.title, story: Faker::Movie.quote, image_url: "https://hips.hearstapps.com/esq.h-cdn.co/assets/17/24/08_airjordan1allstar.jpg")
+Project.create(title: Faker::Book.title, story: Faker::Movie.quote, image_url: "https://hips.hearstapps.com/esq.h-cdn.co/assets/17/24/08_airjordan1allstar.jpg")
+
+ProjectUser.create(user_id: 1, project_id: 1)
+ProjectUser.create(user_id: 3, project_id: 1)
+ProjectUser.create(user_id: 5, project_id: 1)
+ProjectUser.create(user_id: 2, project_id: 2)
+ProjectUser.create(user_id: 4, project_id: 2)
+ProjectUser.create(user_id: 6, project_id: 2)
+ProjectUser.create(user_id: 1, project_id: 3)
+ProjectUser.create(user_id: 3, project_id: 3)
+ProjectUser.create(user_id: 5, project_id: 3)
