@@ -29,7 +29,7 @@ class ProjectUsersController < ApplicationController
   private
 
   def project_user_params
-    params.permit(:project_id, :user_id, :title)
+    params.permit(:project_id, :user_id)
   end
 
   def set_project_user
