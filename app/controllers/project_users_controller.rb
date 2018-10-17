@@ -1,5 +1,4 @@
 class ProjectUsersController < ApplicationController
-  before_action
 
   def index
     @project_users = ProjectUser.all

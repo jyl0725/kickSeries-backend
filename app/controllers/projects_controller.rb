@@ -1,4 +1,5 @@
 class ProjectsController < ApplicationController
+  skip_before_action :authorized, only: [:index]
   before_action :found_project, only: [:show,:update,:destroy]
 
   def index
@@ -7,12 +8,12 @@ class ProjectsController < ApplicationController
   end
 
   def create
-    project = Project.create(Project_params)
+    project = Project.create(project_params)
     render json: project, status: 201
   end
 
   def update
-    @project.update(note_params)
+    @project.update(project_params)
     render json: @project, status: 200
   end
 
@@ -28,7 +29,7 @@ class ProjectsController < ApplicationController
 
   private
   def project_params
-    params.permit(:body, :title, :user_id)
+    params.permit(:title, :story, :image_url)
   end
 
   def found_project

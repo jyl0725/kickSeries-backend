@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  skip_before_action :authorized, only: [:create]
   before_action :found_user, only: [:show,:update,:destroy]
 
   def index
@@ -7,12 +8,16 @@ class UsersController < ApplicationController
   end
 
   def create
-    user = User.create(Project_params)
-    render json: user, status: 201
+    @user = User.create(user_params)
+      if @user.valid?
+       render json: @users
+       else
+         render json: { error: 'Username is taken' }, status: :not_acceptable
+      end
   end
 
   def update
-    @user.update(note_params)
+    @user.update(user_params)
     render json: @user, status: 200
   end
 
@@ -31,9 +36,10 @@ class UsersController < ApplicationController
     params.permit(:name, :username, :password, :role)
   end
 
+  # def login_params
+
+
   def found_user
     @user = User.find(params[:id])
   end
-
-
 end
