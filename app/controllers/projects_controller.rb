@@ -1,5 +1,5 @@
 class ProjectsController < ApplicationController
-  skip_before_action :authorized, only: [:index]
+  skip_before_action :authorized
   before_action :found_project, only: [:show,:update,:destroy]
 
   def index

@@ -3,5 +3,8 @@ Rails.application.routes.draw do
   resources :projects
   resources :project_users
   resources :users
-  
+  get '/profile', to: 'users#profile'
+  post '/login', to: 'auths#create'
+
+
 end

@@ -1,4 +1,5 @@
 class ProjectUsersController < ApplicationController
+  skip_before_action :authorized
 
   def index
     @project_users = ProjectUser.all
