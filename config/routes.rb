@@ -6,6 +6,4 @@ Rails.application.routes.draw do
   get '/profile', to: 'users#profile'
   post '/login', to: 'auths#create'
   mount ActionCable.server => '/cable'
-
-
 end

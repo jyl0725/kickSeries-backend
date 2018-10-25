@@ -8,12 +8,17 @@ class ProjectsController < ApplicationController
   end
 
   def create
-    project = Project.create(project_params)
-    render json: project, status: 201
+    @project = Project.create(project_params)
+    if @project.valid?
+    render json: @project, status: 201
+    else
+      render json: { error: 'A Project of the same title already exist and/or Project title can not be blank' }, status: :not_acceptable
+    end
   end
 
   def update
     @project.update(project_params)
+    ActionCable.server.broadcast('my_feed', @project)
     render json: @project, status: 200
   end
 
