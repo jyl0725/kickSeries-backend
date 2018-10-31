@@ -5,5 +5,6 @@ Rails.application.routes.draw do
   resources :users
   get '/profile', to: 'users#profile'
   post '/login', to: 'auths#create'
+  post '/sessions', to: 'sessions#create'
   mount ActionCable.server => '/cable'
 end
