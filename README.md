@@ -1,25 +1,22 @@
-# README
+## Kick Series
+A project management application for sneaker design.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Motivation
+This project was created for a fluid workflow, with my own blend of passion for sneaker design, in any design work!
 
-Things you may want to cover:
+## Demo
+A Demo of this project can be found at :
 
-* Ruby version
+[Youtube](https://www.youtube.com/watch?v=k_ZiRYu9OVs)
 
-* System dependencies
+## Built with
 
-* Configuration
+<b>Built With </b>
+-React
+-Redux
+-Ruby on Rails
+-PostGresQL
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-# kickSeries-backend
+## Installation
+Run Bundle Install
+Rails s -p 4000(When starting server)
