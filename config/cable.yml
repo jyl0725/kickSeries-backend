@@ -6,8 +6,8 @@ test:
 
 production:
   adapter: redis
-  url: <%= ENV.fetch("REDIS_URL") { "redis://redistogo:0725e7372d8315d8f988a15feec51903@spinyfin.redistogo.com:11783/" } %>
+  url: "redis://redistogo:0725e7372d8315d8f988a15feec51903@spinyfin.redistogo.com:11783/"
   channel_prefix: kickSeries_production
   :host: spinyfin.redistogo.com
-  :port: 49382
+  :port: 11783
   :password: 0725e7372d8315d8f988a15feec51903
