@@ -11,5 +11,3 @@ production:
   :host: spinyfin.redistogo.com
   :port: 49382
   :password: 0725e7372d8315d8f988a15feec51903
-  :inline: true
-  :timeout: 1
