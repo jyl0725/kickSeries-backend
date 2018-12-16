@@ -1,10 +1,6 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
-  config.middleware.use ProjectActionCable
-
-  config.web_socket_server_url = "wss://https://kickseries-app-api.herokuapp.com/cable"
-
   config.action_cable.allowed_request_origins = ['https://kickseries-app.herokuapp.com']
 
   # Code is not reloaded between requests.
